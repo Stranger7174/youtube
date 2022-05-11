@@ -1,0 +1,248 @@
+:root [color-thema = white] {
+  background-color: whitesmoke;
+  color: black;
+}
+:root [color-thema = black] {
+  background-color: black;
+  color: whitesmoke;
+}
+
+.icon {
+  height: 26px;
+  width: 26px;
+}
+.ic {
+  height: 28px;
+  width: 28px;
+}
+.dropdown:hover .block {
+  display: block;
+}
+.hand:hover {
+  cursor: pointer;
+}
+.block {
+  position: absolute;
+  display: none;
+}
+
+@media (prefers-color-scheme) {
+  .div{background-color: black;}
+}
+
+header {
+  height: 45px;
+}
+#mainebar { /* 헤더 설정 */
+  /* 시작지점 */
+  height: 45px;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+  align-items: center;
+  text-align: center;
+}
+#start {
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-content: center; */
+  flex: 0 0;
+  line-height: 100%;
+}
+#maineimg {
+  margin: 5px;
+  height: 25px;
+}
+
+
+#center {
+  /* 검색바 설정 */
+  /* display: inherit; */
+  text-align: center;
+  /* flex-grow: 0.8; */
+  
+  justify-items: center;
+}
+.search {
+  display: flex;
+  align-items: center;
+}
+#inputdiv {
+  height: 40px;
+  border: 1px solid gray;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-right: 0px;
+  padding-right: 0px;
+  display: flex;
+  align-items: center;
+}
+#searche {
+  height: 38px;
+  width: 670px;
+  /* max-width: 750px; */
+  min-width: 200px;
+  margin-left: 10px;
+  border: 0px;
+  padding: 0px;
+  flex: 1 5;
+}
+#btndiv {
+  border: 1px solid gray;
+  border-bottom-right-radius: 3px;
+  border-top-right-radius: 3px;
+  padding-left: 0px;
+  flex-grow: 0 0;
+  margin-right: 5px;
+}
+#searchebtn {
+  height: 40px;
+  width: 55px;
+  border: 0px;
+  padding: 0px;
+}
+.vicesharch {
+  display: grid;
+  place-content: center;
+  height: 40px;
+  width: 40px;
+  background-color: rgb(215, 215, 215);
+  border-radius: 20px;
+  margin: 5px;
+  flex: 0;
+}
+#serimg {
+  display: none;
+}
+
+
+#end {
+  display: flex;
+  flex: 0 0;
+  /* justify-items: center; */  
+  align-items: center;  
+}
+.apps {
+  display: none;
+}
+#sainin { 
+  background-color: transparent;
+  color: dodgerblue;
+  border: 1px solid dodgerblue;
+  border-radius: 3px;
+}
+
+
+/* nav 설정 */
+#bignav { 
+  /*큰 nav설정*/
+  display: block;
+  width: 180px;
+  /* background-color: aqusa; */
+}
+.navchaild {
+  display: flex;
+}
+.navchaild div {
+  display: grid;
+  place-content: center;
+  background-color: grey;
+  height: 36px;
+  width: 36px;
+  border-radius: 18px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.navchaild p {
+  margin: 0px;
+}
+
+#minenav { 
+  /*작은 nav 설정*/
+
+  /*가운데 정렬안됨*/
+  text-align: center;
+  position: fixed;
+  width: 60px;
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+  justify-items: center;
+  display: none;
+}
+.minitem span {
+  font-size: 5px;
+}
+
+/* content css */
+#contein {
+  left: 155px;
+  display: flex;
+  flex-shrink: 5;
+  text-align: center;
+}
+#videocontent {
+  margin-left: 180px;
+  position: relative;
+  width: 100vw;
+  flex-grow: 1;
+  flex-shrink: 1;
+  display: flex;
+  flex-flow: row wrap;    
+  /* background-color: blue; */
+}
+.select {
+  margin-left: 180px;
+  border-top: 1px rgb(202, 202, 202) solid;
+  border-bottom: 1px rgb(202, 202, 202) solid;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+}
+.select span {
+  padding: 8px;
+  border: 1px rgb(202, 202, 202) solid;
+  border-radius: 20px;
+  margin: 8px;
+  background-color: rgb(245, 245, 245);
+}
+.select span:hover {
+  cursor: pointer;
+}
+#contents {
+  height: 290px;
+  width: 250px;
+  margin: 3px;
+}
+#contents:hover {
+  cursor: pointer;
+}
+#contents video{
+  display: block;
+  width: 100%;
+}
+
+/* nav 조절 */
+@media only screen and (max-width: 1320px)  {
+  #minenav {
+    display: block;
+  }
+  #bignav {
+    display: none;
+  }
+  #videocontent {
+    left: 60px;
+  }
+}
+@media only screen and (max-width: 810px)  {
+  #minenav {
+    display: none;
+  }
+
+  #videocontent {
+    left: 0px;
+  }
+}

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="image/x-icon" href="./img/youtube.ico">
+  <link rel="stylesheet" href="./youtube.css">
+
+  <title>youtube</title>
+</head>
+<script>
+  function navtoggl() {
+    const big = document.querySelector("#bignav");
+    const min = document.querySelector("#minenav");
+    // = 대입연산자
+    // === 비교연산자
+    //block에서 none으로 전환안됨
+    if (big.style.display === "none") {
+      // console.log('논'+"1");
+      big.style.display = "block";
+      min.style.display = "none";
+    } else {
+      // console.log('블럭');
+      big.style.display = "none";
+      min.style.display = "block";
+    }
+    console.log(big.style.display === "none");
+    // console.log(min.style.display === "block");
+  }
+  function sainin() {
+    onclick = location.href = 'https://accounts.google.com/signin/v2/identifier?service=youtube&uilel=3&passive=true&continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26app%3Ddesktop%26hl%3Dko%26next%3Dhttps%253A%252F%252Fwww.youtube.com%252F&hl=ko&ec=65620&flowName=GlifWebSignIn&flowEntry=ServiceLogin';
+  }
+  function play() {
+    onclick = location.href
+  }
+
+</script>
+<body>
+  <header>
+    <div id="mainebar">
+      <div id="start">
+        <div><img id="navbtn" class="ic hand" src="./img/MiConv.com__bar.ico" alt="" onclick="navtoggl()"></div>
+        <div><a href="index.html"><img id="maineimg" class="maine hand" src="./img/youtube.png" alt="youtube"></a></div>
+      </div>
+      <div id="center">
+        <div class="search">
+          <!-- input이랑 button 안붙음 -->
+          <div id="inputdiv" class="">
+            <input id="searche" class="sharchinput icon" name="searchebar" type="search" placeholder="검색">
+          </div>
+          <div id="btndiv" class="">
+            <button id="searchebtn" class="sharchinput hand" type="submit">검색</button>
+            </div>
+        </div>
+        <div class="vicesharch"><img src="./img/MiConv.com__micropone.ico" alt="음성으로 검색" class="ic"></div>
+      </div>
+      <div id="end" class="">
+        <div id="" class="dropdown">
+          <img src="./img/MiConv.com__dorpbox.ico" class="ic hand">
+          <span id="apps" class="block" style="display: none;">YouTube 앱</span>
+        </div>
+        <div id="" class="dropdown">
+          <img src="./img/MiConv.com__setting.ico"></i>
+          <span id="setting" class="block">설정</span>
+        </div>
+        <button id="sainin" class="hand" type="button" onclick="sainin()"><img src="./img/MiConv.com__humen.ico" class="icon">로그인</button>
+      </div>
+    </div>
+    <nav id="minenav" class="">
+      <div style="background-color: aliceblue; height: 100%; width: 100%;">
+        <div id="home" class="minitem hand">
+          <div><img src="./img/MiConv.com__home.ico" class="ic"><br></div>
+          <div><span>홈</span></div>
+        </div><br>
+        <div id="lokrarund" class="minitem hand">
+          <div><img src="./img/MiConv.com__compass.ico" class="ic"><br></div>
+          <div><span>탐색</span></div>
+        </div><br>
+        <div id="short" class="minitem hand">
+          <div><img src="./img/MiConv.com__short.ico" alt="" class="ic"><br></div>
+          <div><span>shorts</span></div>
+        </div><br>
+        <div id="subscribe" class="minitem hand">
+          <div><img src="./img/MiConv.com__playbox.ico" class="ic"><br></div>
+          <dlv><span>구독</span></div>
+        </div><br>
+        <div id="library" class="minitem hand">
+          <div><img src="./img/MiConv.com__playlist.ico" class="ic"><br></div>
+          <div><span>보관함</span></div>
+        </div><br>
+        <div id="view" class="minitem hand">
+          <div><img src="./img/MiConv.com__viwetime.ico" class="ic"><br></div>
+          <div><span>시청기록</span></div>
+        </div><br>
+      </div>
+    </nav>
+    <nav id="bignav" class="">
+      <div id="home" class="navchaild">
+        <p><img src="./img/MiConv.com__home.ico" class="ic"></p>
+        <p>홈</p>
+      </div><br>
+      <div id="lokrarund" class="navchaild">
+        <p><img src="./img/MiConv.com__home.ico" class="ic"></p>
+        <p>탐색</p>
+      </div><br>
+      <div id="short" class="navchaild">
+        <p><img src="./img/MiConv.com__short.ico" class="ic"></p>
+        <p>shorts</p>
+      </div><br>
+      <div id="subscribe" class="navchaild">
+        <p><img src="./img/MiConv.com__playbox.ico" class="ic"></p>
+        <p>구독</p>
+      </div><br>
+      <div id="library" class="navchaild">
+        <p><img src="./img/MiConv.com__playlist.ico" class="ic"></p>
+        <p>보관함</p>
+      </div><br>
+      <div id="view" class="navchaild">
+        <p><img src="./img/MiConv.com__viwetime.ico" class="ic"></p>
+        <p>시청기록</p>
+      </div><br><hr>
+      <div>로그인하면 동영상에 좋아요를 표시하고 댓글을 달거나 구독할 수 있습니다</div><br>
+      <button id="sainin" class="navchaild">
+        <img src="./img/MiConv.com__humen.ico" class="icon">
+        <p>로그인</p>
+      </button><hr>
+      <div id="music" class="navchaild">
+        <p><div><img src="./img/MiConv.com__music.ico" class="icon"></div></p>
+        <p>음악</p>
+      </div><br>
+      <div id="sport" class="navchaild">
+        <p><div><img src="./img/MiConv.com__sport.ico" class="icon"></div></p>
+        <p>스포츠</p>
+      </div><br>
+      <div id="game" class="navchaild">
+        <p><div><img src="./img/MiConv.com__game.ico" class="icon"></div></p>
+        <p>게임</p>
+      </div><br>
+      <div id="muvie" class="navchaild">
+        <p><div><img src="./img/muvie.svg" class="icon"></div></p>
+        <p>영화</p>
+      </div><br>
+      <div id="news" class="navchaild">
+        <p><div><img src="./img/nwes.svg" class="icon"></div></p>
+        <p>뉴스</p>
+      </div><br>
+      <div id="onaer" class="navchaild">
+        <p><div><img src="./img/onaer.svg" class="icon"></div></p>
+        <p>실시간</p>
+      </div><br>
+      <div id="sterdy" class="navchaild">
+        <p><div><img src="./img/MiConv.com__sterdy.ico" class="icon"></div></p>
+        <p>학습</p>
+      </div><br>
+      <div id="360video" class="navchaild">
+        <p><div><img src="./img/MiConv.com__3d.ico" class="icon"></div></p>
+        <p>360º동영상</p>
+      </div><br><hr>
+      <div id="library" class="navchaild">
+        <p><img src="./img/MiConv.com__usersetting.ico" class="ic"></p>
+        <p>설정</p>
+      </div><br>
+      <div id="library" class="navchaild">
+        <p><img src="./img/MiConv.com__seport.ico" class="ic"></p>
+        <p>신고기록</p>
+      </div><br>
+      <div id="library" class="navchaild">
+        <p><img src="./img/MiConv.com__sepportcustomer.ico" class="ic"></p>
+        <p>고객센터</p>
+      </div><br>
+      <div id="library" class="navchaild">
+        <p><img src="./img/MiConv.com__comment.ico" class="ic"></p>
+        <p>의견보내기</p>
+      </div><br>
+    </nav>
+  </header>
+  <div id="play" class="">
+    
+  </div>
+</body>
+</html>
