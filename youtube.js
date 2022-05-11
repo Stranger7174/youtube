@@ -108,29 +108,35 @@ function navtoggl() {
   localStorage.length */
   //주의: 문자형만 입력가능
 function darkmode() {
-  const check = document.querySelector("input[name=selectmode]");
 
-  var selectmode = document.querySelector("input[name='selectmode']:checked").value;
-  var displaymode = window.localStorage.getItem('color-mode');
   // var getmode = window.localStorage('color-mode', )
   // var selectmode = document.getElementsByName('selectmode:checked');
-  // const white = document.getElementById('selectmode')
-  console.log(selectmode);
-  console.log(displaymode);
-  window.onload = function () {
-    if (selectmode === 'dark') {
-      document.documentElement.attributes('color-mode', 'dark');
-    } else {
-      document.documentElement.attributes('color-mode', 'white');
-    }
-  };
-  // check.addEventListener('click', e => {
-     if (selectmode === 'dark') {
+  // const light = document.getElementById('selectmode') 
+  
+  var check = document.querySelector("input[id=selectmode]:checked").value;
+  console.log(check);
+  var selectmode = localStorage.getItem('color-mode');
+  // console.log(selectmode);
+  document.querySelector('#selectmode').addEventListener('click', e => {
+    // console.log('aa');
+    if (e.value === 'dark') {
       console.log('ifdark');
-      displaymodw = window.localStorage.setItem('color-mode', 'dark');
+      window.localStorage.setItem('color-mode', 'dark');
     } else {
-      console.log('ifwhite');
-      displaymode = window.localStorage.setItem('color-mode', 'white');
+      console.log('iflight');
+      window.localStorage.setItem('color-mode', 'light');
     }
-  // })
+  });
 }
+
+window.onload = function () {
+  const osmode = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  var viewthema = selectmode ? selectmode : osmode;
+  if (viewthema === 'dark') {
+    localStorage.setItem('color-mode', 'dark')
+    // document.documentElement.attributes('color-mode', 'dark');
+  } else {
+    localStorage.setItem('color-mode', 'light')
+    // document.documentElement.attributes('color-mode', 'light');
+  }
+};

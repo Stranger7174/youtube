@@ -1,8 +1,8 @@
-:root [color-thema = white] {
+:root [color-mode = light] {
   background-color: whitesmoke;
   color: black;
 }
-:root [color-thema = black] {
+:root [color-mode = dark] {
   background-color: black;
   color: whitesmoke;
 }
