@@ -1,5 +1,7 @@
 #youtube 클론코딩
 
+https://stranger7174.github.io/youtube/
+
 ## 시도해본것
 - 화면 크기에 따라 메뉴 토글
   이슈: none일때만 true값 나와야 되는데 전부 나옴
