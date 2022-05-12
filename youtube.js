@@ -127,14 +127,17 @@ function darkmode() {
       window.localStorage.setItem('color-mode', 'light');
     }
   });
+  const osmode = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  console.log(osmode);
 }
 
 window.onload = function () {
-  const osmode = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  
+
   var viewthema = selectmode ? selectmode : osmode;
   if (viewthema === 'dark') {
     localStorage.setItem('color-mode', 'dark')
-    // document.documentElement.attributes('color-mode', 'dark');
+    document.documentElement.attributes('color-mode', 'dark');
   } else {
     localStorage.setItem('color-mode', 'light')
     // document.documentElement.attributes('color-mode', 'light');

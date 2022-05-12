@@ -1,12 +1,16 @@
 :root [color-mode = light] {
-  background-color: whitesmoke;
-  color: black;
+  --background-color: whitesmoke;
+  --color: black;
 }
 :root [color-mode = dark] {
-  background-color: black;
-  color: whitesmoke;
-}
 
+  --background-color: black;
+  --color: whitesmoke;
+}
+* {
+  background-color: var(--background-color);
+  color: var(--color);
+}
 .icon {
   height: 26px;
   width: 26px;
@@ -43,7 +47,7 @@ header {
   text-align: center;
 }
 #start {
-  /* display: flex; */
+  display: flex;
   /* justify-content: center; */
   /* align-content: center; */
   flex: 0 0;
