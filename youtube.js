@@ -137,9 +137,9 @@ window.onload = function () {
   var viewthema = selectmode ? selectmode : osmode;
   if (viewthema === 'dark') {
     localStorage.setItem('color-mode', 'dark')
-    document.documentElement.attributes('color-mode', 'dark');
+    document.documentElement.setAttribute('color-mode', 'dark');
   } else {
     localStorage.setItem('color-mode', 'light')
-    // document.documentElement.attributes('color-mode', 'light');
+    document.documentElement.setAttribute('color-mode', 'light');
   }
 };
