@@ -1,11 +1,12 @@
-:root [color-mode = light] {
-  --background-color: whitesmoke;
-  --color: black;
-}
 :root [color-mode = dark] {
-
-  --background-color: black;
-  --color: whitesmoke;
+  --background-color: #141414;
+  --color: #fff
+}
+@media (prefers-color-scheme) {
+  * {
+    background-color: var(--background-color);
+    color: var(--color);
+  }
 }
 * {
   background-color: var(--background-color);
@@ -28,10 +29,6 @@
 .block {
   position: absolute;
   display: none;
-}
-
-@media (prefers-color-scheme) {
-  .div{background-color: black;}
 }
 
 header {

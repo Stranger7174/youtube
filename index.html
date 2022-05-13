@@ -9,7 +9,7 @@
   <script type="text/javascript" src="./youtube.js"></script>
   <title>youtube</title>
 </head>
-<body onresize="resize()">
+<body onresize="resize()" onload="colormode()">
   <header>
     <div id="mainebar">
       <div id="start">
@@ -45,7 +45,7 @@
       </div>
     </div>
     <nav id="minenav" class="">
-      <div style="background-color: white; height: 100%; width: 100%;">
+      <div style="height: 100%; width: 100%;">
         <div id="home" class="minitem hand">
           <div><img src="./img/MiConv.com__home.ico" class="ic"><br></div>
           <div><span>홈</span></div>
@@ -213,8 +213,8 @@
         <div>숲</div>
       </div>
       <form><!-- radio에 name을 안 넣으면 둘다 선택된다, js로 선택값을 가져오려면 value를 넣어야됨 -->
-        <span><input type="radio" id="selectmode" class="dark" name="selectmode" value="dark" onclick="darkmode()"> 다크모드</span>
-        <span><input type="radio" id="selectmode" class="light" name="selectmode" value="light" onclick="darkmode()"> 라이트모드</span>
+        <span><input type="radio" id="selectmode" class="dark" name="selectmode" value="dark" onclick="colormode()"> 다크모드</span>
+        <span><input type="radio" id="selectmode" class="light" name="selectmode" value="light" onclick="colormode()"> 라이트모드</span>
       </form>
     </div>
   </div>

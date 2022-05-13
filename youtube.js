@@ -9,11 +9,8 @@ var min;
 var video;
 document.addEventListener("DOMContentLoaded", function(){
   big = document.querySelector("#bignav");
-  console.log(big);
   min = document.querySelector("#minenav");
-  console.log(min);
   video = document.querySelector("#contein");
-  console.log(video);
 });
 
 function resize() {
@@ -27,17 +24,14 @@ function resize() {
   
   // console.log("inner"+innerline);
   if (1320 < width) {
-    console.log("1320");
     big.style.display = "block";
     min.style.display = "none";
     video.style.left = '150px';
   } else if (810 < width) {
-    console.log("810");
     big.style.display = "none";
     min.style.display = "block";
     video.style.left = '60px';
   } else {
-    console.log("400");
     big.style.display = "none";
     min.style.display = "none";
     video.style.left = '0px';
@@ -58,41 +52,25 @@ function navtoggl() {
   //첫클릭 씹힘???
   if (810 < innerWidth) {
     if (big.style.display === "none") {
-      console.log('논');
       big.style.display = "block";
-      console.log(1);
       min.style.display = "none";
-      console.log(2);
       video.style.left = "150px";
       video.style.width = "100vw";
-      console.log(3);
-      // alert("none");
     } else {
-      console.log('블럭');
       big.style.display = "none";
-      console.log(1);
       min.style.display = "block";
-      console.log(2);
       video.style.left = "60px";
       video.style.width = "100vw";
-      console.log(3);
-      // alert("block");
     }
   
   } else {
     if (big.style.display === "none") {
-      console.log('800논');
       big.style.display = "block";
       big.style.position = "absolute";
-      console.log(1);
-      video.style.width = "100vw";
-      console.log(2);        
+      video.style.width = "100vw";     
     } else {
-      console.log('800블럭');
       big.style.display = "none";
-      console.log(1);
       video.style.width = "100vw";
-      console.log(3);
     }
   }
 }
@@ -107,39 +85,63 @@ function navtoggl() {
   저장된 키/값 쌍의 개수
   localStorage.length */
   //주의: 문자형만 입력가능
-function darkmode() {
+  function colormode() {
+    var osmode;
+    var selectmode;
+    var viewthema;
+    console.log(osmode);
+    console.log(selectmode);
+    
+    window.addEventListener(onload, () => {
+      osmode = window.matchMedia('prefers-color-scheme:dark').media ? 'light' : 'drak';
+      viewthema = selectmode ? selectmode : osmode;
+    });
+    
+    document.addEventListener(onclick, () => {
+      selectmode = document.querySelector("input[name=colormode]:checked").value;
+      if(selectmode == 'dark') {
+        window.localStorage.setItem('color-mode', 'dark');
+        console.log(osmode);
+        console.log(selectmode);
+      } else {
+        window.localStorage.setItem('color-mode', 'light');
+        console.log(osmode);
+        console.log(selectmode);
+      }
+    });
+    
+  };
 
-  // var getmode = window.localStorage('color-mode', )
-  // var selectmode = document.getElementsByName('selectmode:checked');
-  // const light = document.getElementById('selectmode') 
+// function darkmode() {
+//  var getmode = window.localStorage('color-mode', )
+//  var selectmode = document.getElementsByName('selectmode:checked');
+//  const light = document.getElementById('selectmode') 
   
-  var check = document.querySelector("input[id=selectmode]:checked").value;
-  console.log(check);
-  var selectmode = localStorage.getItem('color-mode');
-  // console.log(selectmode);
-  document.querySelector('#selectmode').addEventListener('click', e => {
-    // console.log('aa');
-    if (e.value === 'dark') {
-      console.log('ifdark');
-      window.localStorage.setItem('color-mode', 'dark');
-    } else {
-      console.log('iflight');
-      window.localStorage.setItem('color-mode', 'light');
-    }
-  });
-  const osmode = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-  console.log(osmode);
-}
+//   var check = document.querySelector("input[id=selectmode]:checked").value;
+//   console.log(check);
+//   var selectmode = localStorage.getItem('color-mode');
+//   console.log(selectmode);
+//   document.querySelector('#selectmode').addEventListener('click', e => {
+//     // console.log('aa');
+//     if (e.value === 'dark') {
+//       console.log('ifdark');
+//       window.localStorage.setItem('color-mode', 'dark');
+//     } else {
+//       console.log('iflight');
+//       window.localStorage.setItem('color-mode', 'light');
+//     }
+//   });
+//   const osmode = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+//   console.log(osmode);
+// }
 
-window.onload = function () {
-  
-
-  var viewthema = selectmode ? selectmode : osmode;
-  if (viewthema === 'dark') {
-    localStorage.setItem('color-mode', 'dark')
-    document.documentElement.setAttribute('color-mode', 'dark');
-  } else {
-    localStorage.setItem('color-mode', 'light')
-    document.documentElement.setAttribute('color-mode', 'light');
-  }
-};
+// window.onload = function () {
+//   var viewthema = selectmode ? selectmode : osmode;
+//   if (viewthema === 'dark') {
+//     localStorage.setItem('color-mode', 'dark')
+//     document.documentElement.setAttribute('color-mode', 'dark');
+//   } else {
+//     localStorage.setItem('color-mode', 'light')
+//     document.documentElement.setAttribute('color-mode', 'light');
+//   }
+// };
