@@ -87,18 +87,13 @@ function navtoggl() {
   //주의: 문자형만 입력가능
   function colormode() {
     var osmode;
-    var selectmode;
+    var selectmode = document.querySelector("#selectmdoe");
     var viewthema;
     console.log(osmode);
     console.log(selectmode);
     
-    window.addEventListener(onload, () => {
-      osmode = window.matchMedia('prefers-color-scheme:dark').media ? 'light' : 'drak';
-      viewthema = selectmode ? selectmode : osmode;
-    });
-    
-    document.addEventListener(onclick, () => {
-      selectmode = document.querySelector("input[name=colormode]:checked").value;
+    document.addEventListener(click, colormode(a) => {
+      selectmode;
       if(selectmode == 'dark') {
         window.localStorage.setItem('color-mode', 'dark');
         console.log(osmode);
@@ -109,7 +104,12 @@ function navtoggl() {
         console.log(selectmode);
       }
     });
-    
+
+    window.addEventListener.load = () => {
+      osmode = window.matchMedia('prefers-color-scheme:dark').media ? 'light' : 'drak';
+      viewthema = selectmode ? selectmode : osmode;
+    };
+        
   };
 
 // function darkmode() {

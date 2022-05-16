@@ -213,8 +213,9 @@
         <div>숲</div>
       </div>
       <form><!-- radio에 name을 안 넣으면 둘다 선택된다, js로 선택값을 가져오려면 value를 넣어야됨 -->
-        <span><input type="radio" id="selectmode" class="dark" name="selectmode" value="dark" onclick="colormode()"> 다크모드</span>
-        <span><input type="radio" id="selectmode" class="light" name="selectmode" value="light" onclick="colormode()"> 라이트모드</span>
+        <!-- <span id="selectmode" class="os" name="selectmode" value="os" onclick="colormode(3)">기기선택모드</span> -->
+        <span id="selectmode" class="dark" name="selectmode" value="dark" onclick="colormode(2)">다크모드</span>
+        <span id="selectmode" class="light" name="selectmode" value="light" onclick="colormode(1)">라이트모드</span>
       </form>
     </div>
   </div>
