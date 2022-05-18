@@ -85,32 +85,15 @@ function navtoggl() {
   저장된 키/값 쌍의 개수
   localStorage.length */
   //주의: 문자형만 입력가능
-  function colormode() {
-    var osmode;
-    var selectmode = document.querySelector("#selectmdoe");
-    var viewthema;
-    console.log(osmode);
-    console.log(selectmode);
-    
-    document.addEventListener(click, colormode(a) => {
-      selectmode;
-      if(selectmode == 'dark') {
-        window.localStorage.setItem('color-mode', 'dark');
-        console.log(osmode);
-        console.log(selectmode);
-      } else {
-        window.localStorage.setItem('color-mode', 'light');
-        console.log(osmode);
-        console.log(selectmode);
-      }
-    });
+var selectusermode;
+var osmode;
+var getmode;
+window.addEventListener(load, colormode(a) {
 
-    window.addEventListener.load = () => {
-      osmode = window.matchMedia('prefers-color-scheme:dark').media ? 'light' : 'drak';
-      viewthema = selectmode ? selectmode : osmode;
-    };
-        
-  };
+});
+document.addEventListener(click, colormode(a) {
+
+});
 
 // function darkmode() {
 //  var getmode = window.localStorage('color-mode', )
